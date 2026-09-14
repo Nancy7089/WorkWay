@@ -4,13 +4,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
+import {Routes,Route} from "react-router-dom"
+import Home from './pages/Home'
+import Resume from './pages/Resume'
+
 
 function App() {
   return(
     <>
     <Navbar/>
-    <h1>Hello World</h1>
-    <p>Hi this is the first step.</p>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/resume" element={<Resume />} />
+      <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+
+    </Routes>
     </>
 
   )

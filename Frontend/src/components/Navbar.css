@@ -24,6 +24,11 @@
   user-select: none;
 }
 
+.navbar-brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .brand-accent {
   color: var(--accent);
 }
@@ -41,19 +46,29 @@
 .nav-links li {
   font-size: 15px;
   font-weight: 500;
-  color: var(--text);
   cursor: pointer;
   position: relative;
   padding: 4px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
   transition: color 0.2s ease;
 }
 
-.nav-links li:hover {
+.nav-links a:hover {
   color: var(--text-h);
 }
 
-/* Subtle animated indicator under link on hover */
-.nav-links li::after {
+/* Active route styling applied automatically by NavLink */
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Subtle animated indicator under link on hover or when active */
+.nav-links a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -65,7 +80,8 @@
   transition: width 0.2s ease;
 }
 
-.nav-links li:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
