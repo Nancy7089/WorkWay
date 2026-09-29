@@ -4,7 +4,13 @@ function Profile(){
     const [targetRoles,settargetRoles]=useState('');
     const [skills,setSkills]=useState('');
     const [experienceLevel,setexperienceLevel]=useState('Entry-level');
-   
+    const [minSalary, setMinSalary] = useState('');
+    const [maxSalary, setMaxSalary] = useState('');
+    const [bio, setBio] = useState('');
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
+    const [isSaving, setIsSaving] = useState(false);
+
 
 }
 
